@@ -1,0 +1,5 @@
+aws iam get-group --group-name "Admin"
+aws iam get-group --group-name "Admin" --query "Users[:3].UserId"
+aws iam get-group --group-name "Admin" --query "Users[].{Name:UserName, Arn:Arn}" --output table
+aws iam get-group --group-name "Admin" --query "Group.GroupId"
+aws iam get-group --group-name "Admin" --query "Group.Arn"
